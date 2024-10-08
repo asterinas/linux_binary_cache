@@ -2,8 +2,7 @@
 
 ## Overview
 
-This repository contains Linux kernels and modules for benchmarks which need Linux VMs as baselines.
+This repository contains Linux kernels for benchmarks which need Linux VMs as baselines.
 
-`vmlinuz-5.15.0-105-generic` is a specific version of the Linux kernel designed for Ubuntu 20.04 LTS (Focal Fossa). This kernel version belongs to the 5.15.0-105 series and includes updates for performance, stability, and security enhancements.
+`vmlinuz-5.15.0-105` is compiled from Linux 5.15.105 source code with default settings, except for enabling the Ext2 file system and disabling `SYSTEM_REVOCATION_KEYS` and `SYSTEM_TRUSTED_KEYS`. The kernel already includes VirtIO drivers such as `Virtio-Net` and `Virtio-Block`.
 
-[kernel](kernel/) contains additional kernel modules that can be loaded into the Linux kernel. The `virtio_blk.ko` module, for instance, provides support for the VirtIO block driver.
